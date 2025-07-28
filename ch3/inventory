@@ -1,0 +1,5 @@
+node01 ansible_host="your_ip" ansible_ssh_pass="your_pass" ansible_user="your_user"
+node02 ansible_host="your_ip" ansible_ssh_pass="your_pass" ansible_user="your_user"
+[web_nodes]
+node01
+node02

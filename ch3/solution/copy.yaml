@@ -1,0 +1,7 @@
+- hosts: node01
+  become: true
+  tasks:
+    - copy:
+        src:  /opt/file.txt
+        dest: /home/file.txt
+        remote_src: yes

@@ -1,0 +1,8 @@
+- hosts: node01
+  become: true
+  tasks:
+    - replace:
+        path: /opt/file.txt
+        regexp: 'Ansible'
+        replace: 'Ansible Automation'
+
