@@ -1,17 +1,46 @@
 قبل ما تبدأ عدل ال inventory
 
-### 1. Create a playbook callled perm.yml under /playbooks directory, an inventory file called inventory is already present under /home/bob/playbooks directory itself. Using this playbook perform below mentioned tasks:
-*frist create user called sam , group called sam*
-1. Create an empty file called blog.txt under /opt/news/ directory on node01. Change its group owner to sam .
-2. Create an empty file called story.txt under /opt/news/ directory on node02. Change its user owner to sam .
----
-### 2. Create a playbook called file.yml under playbooks/ directory and use this playbook to create a file called /opt/file.txt on node01 host. The contents of the file must be This file is created by Ansible!
+### ✅ 1. `perm.yml` – File Ownership and Permissions
 
-### 3. Create a playbook called copy.yml under playbooks/ directory to copy /opt/file.txt file to node01 location /home/file.txt.
+**Location**: `/playbooks/perm.yml`
+
+**Instructions**:
+- Create a **user** named `sam` and a **group** named `sam`.
+- On `node01`:
+  - Create an empty file named `blog.txt` in `/opt/news/`.
+  - Set the **group owner** of the file to `sam`.
+- On `node02`:
+  - Create an empty file named `story.txt` in `/opt/news/`.
+  - Set the **user owner** of the file to `sam`.
+
+---
+
+### ✅ 2. `file.yml` – Create File with Content
+
+**Location**: `/playbooks/file.yml`
+
+**Instructions**:
+- On `node01`, create a file at `/opt/file.txt`.
+- The content of the file must be: This file is created by Ansible!
+---
+
+### ✅ 3. `copy.yml` – Local Copy on Target Node
+
+**Location**: `/playbooks/copy.yml`
+
+**Instructions**:
+- Copy the file `/opt/file.txt` to `/home/file.txt` **on the same host (`node01`)**.
+- This is a local copy operation happening **on the target**, not between control and target nodes.
 ملحوظه :هو نفس الفايل اللي انت انشأته ف السؤال اللي قبل دا , يعني التاسك بيقولك في فايل ف node01 عايز اعمله كوبي ف مكان تاني
 يعني انت مش هتعمل كوبي من ال control to target 
 انت بتعمل كوبي من مكان فالتارجت لمكان تاني برده فالتارجت
 ---
-### 4. Write a playbook called replace.yml under playbooks/ directory 
-1. We have a file called /opt/file.txt on node01. Using Ansible replace module replace string "Ansible" with "Ansible Automation"  in that file.
+
+### ✅ 4. `replace.yml` – Replace Text in a File
+
+**Location**: `/playbooks/replace.yml`
+
+**Instructions**:
+- On `node01`, locate the file `/opt/file.txt`.
+- Use the Ansible `replace` module to replace string "Ansible" with "Ansible Automation"  in that file.
 ---
