@@ -1,10 +1,3 @@
-ch4/
-├── README.md
-├── playbooks/
-│   ├── banana.yml
-│   ├── fruits.yml
-│   ├── package.yml
-│   └── copy_file.yml
 
 # Ansible Challenge – Conditional Logic, Loops, and File Management
 
