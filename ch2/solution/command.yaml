@@ -1,0 +1,7 @@
+- name: Execute a command on localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Execute a command
+      command: cat /etc/resolv.conf
+## run using this command: ansible-playbook -i localhost, command.yml
