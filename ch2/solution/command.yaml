@@ -4,4 +4,4 @@
   tasks:
     - name: Execute a command
       command: cat /etc/resolv.conf
-## run using this command: ansible-playbook -i localhost, command.yml
+## run using this command: ansible-playbook -i localhost, command.yml -vv

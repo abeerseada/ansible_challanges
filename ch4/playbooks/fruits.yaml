@@ -1,0 +1,13 @@
+- name: 'Print fruits'
+  hosts: localhost
+  connection: local
+  vars:
+    fruits:
+      - Apple
+      - Banana
+      - Grapes
+      - Orange
+  tasks:
+    - command: 'echo Apple'
+  
+## ansible-playbook -i localhost, fruits.yml -vv

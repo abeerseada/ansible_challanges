@@ -1,0 +1,10 @@
+- hosts: all
+  become: true
+  tasks:
+  - name: Add welcome line to the top of the file
+    lineinfile:
+      path: /var/www/html/index.html
+      line: "Welcome to My_Labs!"
+      insertbefore: BOF
+      create: yes
+      state: present

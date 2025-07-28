@@ -1,0 +1,12 @@
+- name: 'Print fruits'
+  hosts: localhost
+  connection: local
+  vars:
+    fruits:
+      - Apple
+      - Banana
+      - Grapes
+      - Orange
+  tasks:
+    - command: 'echo "{{ item }}"'
+      with_items: '{{ fruits }}'
